@@ -1,56 +1,49 @@
-
 import { Mail, Phone, MapPin, Linkedin, Github, Globe, ArrowUp, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-
-  const quickLinks = [
-    { name: "Beranda", href: "/" },
-    { name: "Tentang", href: "/about" },
-    { name: "Portofolio", href: "/portfolio" },
-    { name: "Kontak", href: "/contact" }
-  ];
-
-  const services = [
-    "Web Development",
-    "UI/UX Design", 
-    "Digital Marketing",
-    "Konsultasi IT"
-  ];
-
-  const socialLinks = [
-    { 
-      icon: <Linkedin className="w-5 h-5" />, 
-      name: "LinkedIn", 
-      href: "https://linkedin.com/in/robin-syaifuddin",
-      color: "hover:text-blue-400"
-    },
-    { 
-      icon: <Github className="w-5 h-5" />, 
-      name: "GitHub", 
-      href: "https://github.com/robinsyaifuddin",
-      color: "hover:text-purple-400"
-    },
-    { 
-      icon: <Globe className="w-5 h-5" />, 
-      name: "Website", 
-      href: "https://robinsyaifuddin.web.id",
-      color: "hover:text-green-400"
-    }
-  ];
-
-  return (
-    <footer className="relative bg-gradient-to-br from-background via-card to-background border-t border-border">
+  const quickLinks = [{
+    name: "Beranda",
+    href: "/"
+  }, {
+    name: "Tentang",
+    href: "/about"
+  }, {
+    name: "Portofolio",
+    href: "/portfolio"
+  }, {
+    name: "Kontak",
+    href: "/contact"
+  }];
+  const services = ["Web Development", "UI/UX Design", "Digital Marketing", "Konsultasi IT"];
+  const socialLinks = [{
+    icon: <Linkedin className="w-5 h-5" />,
+    name: "LinkedIn",
+    href: "https://linkedin.com/in/robin-syaifuddin",
+    color: "hover:text-blue-400"
+  }, {
+    icon: <Github className="w-5 h-5" />,
+    name: "GitHub",
+    href: "https://github.com/robinsyaifuddin",
+    color: "hover:text-purple-400"
+  }, {
+    icon: <Globe className="w-5 h-5" />,
+    name: "Website",
+    href: "https://robinsyaifuddin.web.id",
+    color: "hover:text-green-400"
+  }];
+  return <footer className="relative bg-gradient-to-br from-background via-card to-background border-t border-border">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}></div>
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }}></div>
       </div>
 
       <div className="relative container mx-auto px-6 pt-16 pb-8">
@@ -68,19 +61,11 @@ const Footer = () => {
               Penggiat Teknologi dan Pengembangan Diri yang berkomitmen untuk mewujudkan peradaban yang lebih baik melalui inovasi digital.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`p-3 bg-card border border-border rounded-lg text-gray-400 transition-all duration-300 transform hover:scale-110 hover:border-primary/50 ${social.color} group`}
-                >
+              {socialLinks.map((social, index) => <a key={index} href={social.href} target="_blank" rel="noopener noreferrer" className={`p-3 bg-card border border-border rounded-lg text-gray-400 transition-all duration-300 transform hover:scale-110 hover:border-primary/50 ${social.color} group`}>
                   <div className="transform group-hover:rotate-12 transition-transform duration-300">
                     {social.icon}
                   </div>
-                </a>
-              ))}
+                </a>)}
             </div>
           </div>
 
@@ -91,17 +76,12 @@ const Footer = () => {
               <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-primary to-orange-500 rounded-full"></div>
             </h3>
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-400 hover:text-primary transition-all duration-300 flex items-center group"
-                  >
+              {quickLinks.map((link, index) => <li key={index}>
+                  <Link to={link.href} className="text-gray-400 hover:text-primary transition-all duration-300 flex items-center group">
                     <div className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-3"></div>
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -112,12 +92,10 @@ const Footer = () => {
               <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-primary to-orange-500 rounded-full"></div>
             </h3>
             <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index} className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
+              {services.map((service, index) => <li key={index} className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
                   <div className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-3"></div>
                   {service}
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -150,15 +128,12 @@ const Footer = () => {
             {/* Copyright */}
             <div className="flex items-center space-x-2 text-gray-400">
               <span>&copy; {currentYear} Robin Syaifuddin. Dibuat dengan</span>
-              <Heart className="w-4 h-4 text-red-500 animate-pulse" />
-              <span>di Indonesia</span>
+              
+              
             </div>
 
             {/* Back to Top */}
-            <button
-              onClick={scrollToTop}
-              className="flex items-center space-x-2 px-4 py-2 bg-card border border-border rounded-lg text-gray-400 hover:text-white hover:border-primary/50 transition-all duration-300 transform hover:scale-105 group"
-            >
+            <button onClick={scrollToTop} className="flex items-center space-x-2 px-4 py-2 bg-card border border-border rounded-lg text-gray-400 hover:text-white hover:border-primary/50 transition-all duration-300 transform hover:scale-105 group">
               <span>Kembali ke Atas</span>
               <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-300" />
             </button>
@@ -169,8 +144,6 @@ const Footer = () => {
       {/* Floating Elements */}
       <div className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-br from-primary/10 to-orange-500/10 rounded-full blur-xl"></div>
       <div className="absolute bottom-10 left-10 w-16 h-16 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-xl"></div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
