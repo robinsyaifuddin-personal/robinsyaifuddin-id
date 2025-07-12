@@ -26,23 +26,13 @@ const queryClient = new QueryClient({
   },
 });
 
-// Loading component yang ringan
-const PageLoader = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-    <div className="flex flex-col items-center space-y-4">
-      <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
-      <p className="text-gray-400 animate-pulse">Memuat...</p>
-    </div>
-  </div>
-);
-
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Suspense fallback={<PageLoader />}>
+        <Suspense fallback={<div />}>
           <Routes>
             <Route path="/" element={<PageTransition><Index /></PageTransition>} />
             <Route path="/about" element={<PageTransition><About /></PageTransition>} />
