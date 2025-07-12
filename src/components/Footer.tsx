@@ -124,20 +124,7 @@ const Footer = () => {
 
         {/* Divider */}
         <div className="border-t border-border/50 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <div className="flex items-center space-x-2 text-gray-400">
-              <span>&copy; {currentYear} Robin Syaifuddin. Dibuat dengan</span>
-              
-              
-            </div>
-
-            {/* Back to Top */}
-            <button onClick={scrollToTop} className="flex items-center space-x-2 px-4 py-2 bg-card border border-border rounded-lg text-gray-400 hover:text-white hover:border-primary/50 transition-all duration-300 transform hover:scale-105 group">
-              <span>Kembali ke Atas</span>
-              <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-300" />
-            </button>
-          </div>
+          
         </div>
       </div>
 
