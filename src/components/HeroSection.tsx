@@ -39,9 +39,7 @@ const HeroSection = () => {
           </div>
 
           {/* Description */}
-          <p className={`text-lg md:text-xl text-gray-400 max-w-2xl leading-relaxed transform transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
-          transitionDelay: '0.4s'
-        }}>Penggiat Teknologi dan Pengembangan Diri dengan pengalaman luas dalam pengembangan digitalisasi dan organisasi. Berkomitmen pada pengembangan diri dan selalu haus belajar untuk menjawab tantangan.</p>
+          
 
           {/* CTA Buttons */}
           <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
