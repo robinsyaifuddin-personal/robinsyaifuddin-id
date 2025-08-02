@@ -75,7 +75,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Modern Stats Section */}
+      {/* Modern Stats Section with Marquee */}
       <section className="py-20 px-6 stagger-animation">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -85,7 +85,8 @@ const Index = () => {
             <p className="text-white/70 text-lg">Statistik perjalanan karir dan prestasi</p>
           </div>
           
-          <div className="stats-grid">
+          {/* Desktop: Normal Grid, Mobile: Marquee */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <GlassCard variant="stats">
               <div className="text-5xl font-bold text-gradient mb-3">15+</div>
               <div className="text-white/80 font-medium">Organisasi</div>
@@ -110,6 +111,48 @@ const Index = () => {
               <div className="text-white/60 text-sm mt-2">Sertifikat keahlian</div>
             </GlassCard>
           </div>
+
+          {/* Mobile: Marquee Effect */}
+          <div className="md:hidden overflow-hidden">
+            <div className="flex animate-marquee space-x-6">
+              <GlassCard variant="stats" className="min-w-[200px] flex-shrink-0">
+                <div className="text-3xl font-bold text-gradient mb-2">15+</div>
+                <div className="text-white/80 font-medium text-sm">Organisasi</div>
+                <div className="text-white/60 text-xs mt-1">Pengalaman berorganisasi</div>
+              </GlassCard>
+              
+              <GlassCard variant="stats" className="min-w-[200px] flex-shrink-0">
+                <div className="text-3xl font-bold text-gradient mb-2">5</div>
+                <div className="text-white/80 font-medium text-sm">Proyek Utama</div>
+                <div className="text-white/60 text-xs mt-1">Proyek yang telah diselesaikan</div>
+              </GlassCard>
+              
+              <GlassCard variant="stats" className="min-w-[200px] flex-shrink-0">
+                <div className="text-3xl font-bold text-gradient mb-2">10+</div>
+                <div className="text-white/80 font-medium text-sm">Pelatihan</div>
+                <div className="text-white/60 text-xs mt-1">Pelatihan profesional</div>
+              </GlassCard>
+              
+              <GlassCard variant="stats" className="min-w-[200px] flex-shrink-0">
+                <div className="text-3xl font-bold text-gradient mb-2">8+</div>
+                <div className="text-white/80 font-medium text-sm">Sertifikasi</div>
+                <div className="text-white/60 text-xs mt-1">Sertifikat keahlian</div>
+              </GlassCard>
+              
+              {/* Duplicate for seamless loop */}
+              <GlassCard variant="stats" className="min-w-[200px] flex-shrink-0">
+                <div className="text-3xl font-bold text-gradient mb-2">15+</div>
+                <div className="text-white/80 font-medium text-sm">Organisasi</div>
+                <div className="text-white/60 text-xs mt-1">Pengalaman berorganisasi</div>
+              </GlassCard>
+              
+              <GlassCard variant="stats" className="min-w-[200px] flex-shrink-0">
+                <div className="text-3xl font-bold text-gradient mb-2">5</div>
+                <div className="text-white/80 font-medium text-sm">Proyek Utama</div>
+                <div className="text-white/60 text-xs mt-1">Proyek yang telah diselesaikan</div>
+              </GlassCard>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -128,7 +171,8 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Desktop: Normal Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-8">
             <GlassCard variant="hover">
               <div className="text-center">
                 <div className="w-16 h-16 glass rounded-2xl flex items-center justify-center mb-6 mx-auto">
@@ -164,6 +208,60 @@ const Index = () => {
                 </p>
               </div>
             </GlassCard>
+          </div>
+
+          {/* Mobile: Horizontal Marquee */}
+          <div className="md:hidden overflow-hidden">
+            <div className="flex animate-marquee space-x-6">
+              <GlassCard variant="hover" className="min-w-[280px] flex-shrink-0">
+                <div className="text-center">
+                  <div className="w-12 h-12 glass rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                    <Code className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-3">Web Development</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    Membangun website modern dan responsif dengan teknologi terkini
+                  </p>
+                </div>
+              </GlassCard>
+
+              <GlassCard variant="hover" className="min-w-[280px] flex-shrink-0">
+                <div className="text-center">
+                  <div className="w-12 h-12 glass rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                    <Palette className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-3">UI/UX Design</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    Merancang antarmuka yang menarik dan pengalaman pengguna yang optimal
+                  </p>
+                </div>
+              </GlassCard>
+
+              <GlassCard variant="hover" className="min-w-[280px] flex-shrink-0">
+                <div className="text-center">
+                  <div className="w-12 h-12 glass rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                    <Zap className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-3">AI Automation</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    Mengotomatisasi proses bisnis dengan kecerdasan buatan
+                  </p>
+                </div>
+              </GlassCard>
+
+              {/* Duplicate for seamless loop */}
+              <GlassCard variant="hover" className="min-w-[280px] flex-shrink-0">
+                <div className="text-center">
+                  <div className="w-12 h-12 glass rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                    <Code className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-3">Web Development</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    Membangun website modern dan responsif dengan teknologi terkini
+                  </p>
+                </div>
+              </GlassCard>
+            </div>
           </div>
         </div>
       </section>

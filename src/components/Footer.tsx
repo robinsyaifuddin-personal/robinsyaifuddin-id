@@ -50,7 +50,7 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mb-12">
           {/* Brand Section */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 rounded-xl overflow-hidden border-2 border-white/20 transform hover:scale-110 transition-all duration-300 glow-animation">
                 <img 
@@ -73,8 +73,41 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
+          {/* Mobile: 2 Column Layout for Menu and Services */}
+          <div className="md:hidden grid grid-cols-2 gap-8 col-span-2">
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-6 relative">
+                Menu Utama
+                <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-primary to-orange-500 rounded-full"></div>
+              </h3>
+              <ul className="space-y-3">
+                {quickLinks.map((link, index) => <li key={index}>
+                    <Link to={link.href} className="text-gray-400 hover:text-primary transition-all duration-300 flex items-center group">
+                      <div className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-3"></div>
+                      {link.name}
+                    </Link>
+                  </li>)}
+              </ul>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-6 relative">
+                Layanan
+                <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-primary to-orange-500 rounded-full"></div>
+              </h3>
+              <ul className="space-y-3">
+                {services.map((service, index) => <li key={index} className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
+                    <div className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-3"></div>
+                    {service}
+                  </li>)}
+              </ul>
+            </div>
+          </div>
+
+          {/* Desktop: Normal Layout */}
+          <div className="hidden md:block">
             <h3 className="text-lg font-semibold text-white mb-6 relative">
               Menu Utama
               <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-primary to-orange-500 rounded-full"></div>
@@ -89,8 +122,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
+          <div className="hidden md:block">
             <h3 className="text-lg font-semibold text-white mb-6 relative">
               Layanan
               <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-primary to-orange-500 rounded-full"></div>
@@ -104,7 +136,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h3 className="text-lg font-semibold text-white mb-6 relative">
               Kontak
               <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-primary to-orange-500 rounded-full"></div>
@@ -128,7 +160,11 @@ const Footer = () => {
 
         {/* Divider */}
         <div className="border-t border-border/50 pt-8">
-          
+          <div className="text-center">
+            <p className="text-gray-400 text-sm">
+              © 2025 Robin Syaifuddin. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
 
