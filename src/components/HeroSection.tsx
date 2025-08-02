@@ -20,10 +20,7 @@ const HeroSection = () => {
         {/* Left Content */}
         <div className="flex-1 text-center lg:text-left space-y-8">
           {/* Badge */}
-          <div className={`inline-flex items-center px-6 py-3 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-md transform transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <span className="text-primary text-sm font-medium">Fullstack Web Developer</span>
-            <div className="w-2 h-2 bg-primary rounded-full ml-2 animate-pulse" />
-          </div>
+          
 
           {/* Main Heading */}
           <div className={`space-y-4 transform transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
