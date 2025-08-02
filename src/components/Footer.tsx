@@ -52,8 +52,12 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-orange-500 rounded-xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300 glow-animation">
-                <span className="text-black font-bold text-xl">R</span>
+              <div className="w-10 h-10 rounded-xl overflow-hidden border-2 border-white/20 transform hover:scale-110 transition-all duration-300 glow-animation">
+                <img 
+                  src="/lovable-uploads/0b2e3fc5-f4eb-476f-a858-bda20d9e1e4c.png" 
+                  alt="Robin Syaifuddin" 
+                  className="w-full h-full object-cover" 
+                />
               </div>
               <span className="text-xl font-bold text-white">Robin Syaifuddin</span>
             </div>
