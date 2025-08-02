@@ -46,21 +46,6 @@ const Contact = () => {
     }
   ];
 
-  const trainings = [
-    "Peserta Leadership Development Program – Ikatan Mahasiswa Lampung Timur 2025",
-    "Peserta Latihan Keterampilan Manajemen Mahasiswa TD-ITERA 2024",
-    "Peserta Inspiring Leader Camp Batch 3 - Yayasan Duta Inspirasi Indonesia 2023",
-    "Peserta International Model United Nations, Online Conference 94.0, - International Global Network 2022",
-    "Peserta StartUp Youth Indonesia Leadership Camp, - StartUp Youth Indonesia dan Forum Osis Nasional 2021"
-  ];
-
-  const certifications = [
-    "Sertifikasi Front Office Agroforestri ITERA - Agropreneur ITERA",
-    "Certificate of Competence – Website Creation (habiskerja.com)",
-    "Sertifikat WordPress dari Dasar Hingga Mahir (kursusdigital.id)",
-    "Sertifikat Digital Marketing dari Dasar Hingga Mahir (kursusdigital.id)",
-    "Certificate of Completion – HTML & CSS for Beginners (Learnoverse)"
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -164,34 +149,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Training & Certifications */}
-          <div className="mt-16 grid md:grid-cols-2 gap-8">
-            {/* Training */}
-            <div className="bg-card border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Pelatihan</h3>
-              <div className="space-y-3">
-                {trainings.map((training, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-300 text-sm">{training}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Certifications */}
-            <div className="bg-card border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Sertifikasi</h3>
-              <div className="space-y-3">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-300 text-sm">{cert}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <Footer />

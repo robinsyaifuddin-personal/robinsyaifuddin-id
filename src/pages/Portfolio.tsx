@@ -3,35 +3,6 @@ import Footer from "@/components/Footer";
 import { ExternalLink, Calendar, MapPin } from "lucide-react";
 
 const Portfolio = () => {
-  const experiences = [
-    {
-      title: "Magang Departemen Infrastruktur Teknologi",
-      company: "PT. Aerofood Indonesia, Banten",
-      period: "Juni 2025 - sekarang",
-      achievements: [
-        "Berhasil membuat panduan instalasi software dan hardware perangkat komputer dan printer",
-        "Melakukan troubleshooting hardware & software serta pemeliharaan jaringan lokal pada kantor pusat"
-      ]
-    },
-    {
-      title: "Kepala Departemen Digital",
-      company: "Rekaland Indonesia",
-      period: "Maret 2025 - sekarang",
-      achievements: [
-        "Mengelola dan mengembangkan website serta media sosial untuk membangun branding yang kuat dan profesional",
-        "Meningkatkan visibilitas online guna mendukung proses pemasaran dan mempermudah penjualan produk"
-      ]
-    },
-    {
-      title: "Magang Bidang Kemahasiswaan",
-      company: "Institut Teknologi Sumatera, Lampung",
-      period: "Juni 2024 - September 2024",
-      achievements: [
-        "Melakukan koordinasi dalam penyelenggaraan kegiatan melakukan pengolahan administrasi",
-        "Pengelolaan media sosial dan tracer study penjaringan data alumni ITERA dan penyesuaian dalam website"
-      ]
-    }
-  ];
 
   const projects = [
     {
@@ -70,13 +41,6 @@ const Portfolio = () => {
     }
   ];
 
-  const organizations = [
-    "CEO & Founder DigiBooster Indonesia, Maret 2025 - sekarang",
-    "Anggota Bidang Wasit Esport Indonesia Kabupaten Lampung Timur, Juni 2025 - sekarang",
-    "Anggota Komisi 2 Eksternal Medinfo Senat Keluarga Mahasiswa ITERA, Maret 2025 - sekarang",
-    "Senator Himpunan Mahasiswa Telekomunikasi Quaestum ITERA, Maret 2025 - sekarang",
-    "Kepala Bidang Perencanaan dan Pengembangan GenRe Kabupaten Lampung Timur, Juni 2022 - sekarang"
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -89,41 +53,13 @@ const Portfolio = () => {
               <span className="text-gradient">Portofolio</span> Saya
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Pengalaman kerja, proyek, dan kontribusi dalam berbagai organisasi
+              Kumpulan proyek dan karya yang telah saya kembangkan
             </p>
           </div>
 
-          {/* Work Experience */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8">Pengalaman Kerja</h2>
-            <div className="space-y-8">
-              {experiences.map((exp, index) => (
-                <div key={index} className="bg-card border border-border rounded-xl p-8 hover:border-primary/30 transition-all duration-300">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{exp.title}</h3>
-                      <p className="text-primary font-medium">{exp.company}</p>
-                    </div>
-                    <div className="flex items-center text-gray-400 mt-2 md:mt-0">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      <span>{exp.period}</span>
-                    </div>
-                  </div>
-                  <ul className="space-y-2">
-                    {exp.achievements.map((achievement, idx) => (
-                      <li key={idx} className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <p className="text-gray-300">{achievement}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
 
           {/* Projects */}
-          <div className="mb-16">
+          <div>
             <h2 className="text-3xl font-bold text-white mb-8">Proyek</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {projects.map((project, index) => (
@@ -174,20 +110,6 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/* Organizations */}
-          <div>
-            <h2 className="text-3xl font-bold text-white mb-8">Organisasi</h2>
-            <div className="bg-card border border-border rounded-xl p-8">
-              <div className="space-y-4">
-                {organizations.map((org, index) => (
-                  <div key={index} className="flex items-start space-x-3 py-2">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-gray-300">{org}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <Footer />
