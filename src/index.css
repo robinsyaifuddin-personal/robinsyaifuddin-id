@@ -6,25 +6,25 @@
 
 @layer base {
   :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 21 100% 50%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --background: 120 50% 8%;
+    --foreground: 120 20% 95%;
+    --card: 120 40% 12%;
+    --card-foreground: 120 20% 95%;
+    --popover: 120 40% 12%;
+    --popover-foreground: 120 20% 95%;
+    --primary: 85 100% 50%;
+    --primary-foreground: 120 50% 8%;
+    --secondary: 120 30% 15%;
+    --secondary-foreground: 120 20% 95%;
+    --muted: 120 30% 15%;
+    --muted-foreground: 120 15% 65%;
+    --accent: 120 30% 15%;
+    --accent-foreground: 120 20% 95%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --destructive-foreground: 120 20% 95%;
+    --border: 120 30% 18%;
+    --input: 120 30% 18%;
+    --ring: 85 100% 50%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -38,9 +38,66 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 text-foreground min-h-screen;
     font-family: "Inter", sans-serif;
+    background-attachment: fixed;
   }
+}
+
+/* Glass Morphism Effects */
+.glass {
+  @apply backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl;
+}
+
+.glass-card {
+  @apply backdrop-blur-lg bg-white/5 border border-white/10 rounded-2xl shadow-xl;
+}
+
+.glass-button {
+  @apply backdrop-blur-md bg-primary/90 hover:bg-primary border border-primary/30 shadow-lg transition-all duration-300;
+}
+
+.glass-nav {
+  @apply backdrop-blur-md bg-black/20 border-b border-white/10;
+}
+
+/* Floating Elements */
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(20px);
+  animation: float 20s infinite ease-in-out;
+}
+
+.orb-1 {
+  width: 200px;
+  height: 200px;
+  top: 20%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 20%;
+  animation-delay: 7s;
+}
+
+.orb-3 {
+  width: 100px;
+  height: 100px;
+  top: 40%;
+  right: 5%;
+  animation-delay: 14s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-20px) rotate(120deg); }
+  66% { transform: translateY(10px) rotate(240deg); }
 }
 
 /* Hide Lovable Badge Permanently */
@@ -75,7 +132,7 @@ span:has(svg[width="60"][height="12"]) {
 }
 
 .text-gradient {
-  @apply bg-gradient-to-r from-primary to-orange-400 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-primary to-yellow-400 bg-clip-text text-transparent;
 }
 
 .stagger-animation > * {
@@ -104,20 +161,21 @@ html {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--background));
+  background: rgba(0, 0, 0, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary) / 0.3);
-  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary) / 0.5);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* Performance optimizations */
@@ -132,4 +190,26 @@ img {
 
 .curved-line {
   mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+}
+
+/* Stats Cards Animation */
+.stats-grid {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-6;
+}
+
+.stat-card {
+  @apply glass-card p-6 text-center hover:scale-105 transition-all duration-300;
+}
+
+/* Modern Button Styles */
+.modern-button {
+  @apply glass-button px-8 py-3 rounded-xl font-semibold text-black transition-all duration-300 hover:scale-105 hover:shadow-xl;
+}
+
+/* Hero Section Enhancements */
+.hero-bg {
+  background: linear-gradient(135deg, 
+    rgba(34, 197, 94, 0.1) 0%, 
+    rgba(16, 185, 129, 0.1) 35%, 
+    rgba(5, 150, 105, 0.1) 100%);
 }
