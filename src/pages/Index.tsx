@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
@@ -6,10 +5,8 @@ import GlassCard from "@/components/GlassCard";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, User, Briefcase, Mail, Code, Palette, Zap, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 relative overflow-hidden">
+  return <div className="min-h-screen bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 relative overflow-hidden">
       {/* Floating Background Orbs */}
       <div className="floating-orb orb-1"></div>
       <div className="floating-orb orb-2"></div>
@@ -53,11 +50,9 @@ const Index = () => {
                     <h3 className="text-white font-semibold text-lg">Keahlian Teknis</h3>
                   </div>
                   <div className="flex flex-wrap gap-3">
-                    {["AI Automasi", "Web Development", "Digital Marketing", "UI/UX Design"].map((skill) => (
-                      <span key={skill} className="px-4 py-2 glass rounded-full text-primary font-medium text-sm">
+                    {["AI Automasi", "Web Development", "Digital Marketing", "UI/UX Design"].map(skill => <span key={skill} className="px-4 py-2 glass rounded-full text-primary font-medium text-sm">
                         {skill}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
                 </div>
                 
@@ -67,24 +62,13 @@ const Index = () => {
                     <h3 className="text-white font-semibold text-lg">Soft Skills</h3>
                   </div>
                   <div className="flex flex-wrap gap-3">
-                    {["Kepemimpinan", "Komunikasi", "Manajemen", "Problem Solving"].map((skill) => (
-                      <span key={skill} className="px-4 py-2 glass rounded-full text-primary font-medium text-sm">
+                    {["Kepemimpinan", "Komunikasi", "Manajemen", "Problem Solving"].map(skill => <span key={skill} className="px-4 py-2 glass rounded-full text-primary font-medium text-sm">
                         {skill}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
                 </div>
 
-                <div>
-                  <div className="flex items-center mb-4">
-                    <Briefcase className="w-6 h-6 text-primary mr-3" />
-                    <h3 className="text-white font-semibold text-lg">Pendidikan</h3>
-                  </div>
-                  <div className="glass p-4 rounded-lg">
-                    <p className="text-white font-medium">Institut Teknologi Sumatera</p>
-                    <p className="text-white/70 text-sm mt-1">S1 Teknik Telekomunikasi (2022 - sekarang)</p>
-                  </div>
-                </div>
+                
               </div>
             </GlassCard>
           </div>
@@ -185,8 +169,6 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
