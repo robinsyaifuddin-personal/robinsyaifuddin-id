@@ -13,6 +13,7 @@ const About = lazy(() => import("./pages/About"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const FuturisticPortfolio = lazy(() => import("./pages/FuturisticPortfolio"));
 
 // Optimasi QueryClient untuk performa
 const queryClient = new QueryClient({
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/about" element={<PageTransition><About /></PageTransition>} />
             <Route path="/portfolio" element={<PageTransition><Portfolio /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+            <Route path="/futuristic" element={<PageTransition><FuturisticPortfolio /></PageTransition>} />
             
             {/* Redirect routes untuk typo umum */}
             <Route path="/home" element={<PageTransition><Index /></PageTransition>} />
