@@ -228,100 +228,48 @@ img {
   animation: marquee 10s linear infinite;
 }
 
-/* Futuristic Button Styles */
-.futuristic-button {
-  @apply bg-transparent border-2 border-primary text-primary px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-primary hover:text-black hover:scale-105;
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+/* Futuristic Portfolio Styles */
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.5), 0 0 20px rgba(255, 255, 0, 0.3);
 }
 
-.futuristic-button:hover {
-  box-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
+.glow-button {
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.4), 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.futuristic-button-primary {
-  @apply bg-primary text-black px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:scale-105;
-  box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
+.glow-button:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 0, 0.6), 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.futuristic-button-primary:hover {
-  box-shadow: 0 0 40px rgba(34, 197, 94, 0.7);
+.glow-ring {
+  box-shadow: 0 0 30px rgba(255, 255, 0, 0.3), inset 0 0 30px rgba(255, 255, 0, 0.1);
 }
 
-.futuristic-button-outline {
-  @apply bg-transparent border-2 border-white/20 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:border-primary hover:text-primary hover:scale-105 backdrop-blur-md;
+.glow-image {
+  box-shadow: 0 0 50px rgba(255, 255, 0, 0.4), 0 0 100px rgba(255, 255, 0, 0.2);
 }
 
-.futuristic-button-outline-small {
-  @apply bg-transparent border border-white/20 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-300 hover:border-primary hover:text-primary backdrop-blur-md;
+.glow-card {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 0, 0.1);
 }
 
-.futuristic-button-small {
-  @apply bg-primary text-black px-3 py-1 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105;
-  box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
+.glow-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 255, 0, 0.2);
 }
 
-/* Futuristic Glow Effect */
-.futuristic-glow {
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
-  transition: box-shadow 0.3s ease;
+.glow-bar {
+  box-shadow: inset 0 0 10px rgba(255, 255, 0, 0.2);
 }
 
-.futuristic-glow:hover {
-  box-shadow: 0 0 30px rgba(34, 197, 94, 0.4);
-}
-
-/* Glass Card Enhanced */
-.glass-card {
-  @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl;
-  transition: all 0.3s ease;
-}
-
-.glass-card:hover {
-  @apply bg-white/10 border-white/20;
-  transform: translateY(-2px);
-}
-
-/* Smooth Spin Animation */
-.animate-spin-slow {
-  animation: spin 20s linear infinite;
-}
-
-/* Text Gradient Enhancement */
-.text-gradient {
-  @apply bg-gradient-to-r from-primary via-yellow-400 to-emerald-400 bg-clip-text text-transparent;
-  background-size: 200% 200%;
-  animation: gradient-shift 3s ease-in-out infinite;
-}
-
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-/* Enhanced Floating Orbs */
-.floating-orb {
-  position: absolute;
-  border-radius: 50%;
-  background: linear-gradient(45deg, rgba(34, 197, 94, 0.1), rgba(255, 255, 0, 0.05));
-  backdrop-filter: blur(20px);
-  animation: float-enhanced 25s infinite ease-in-out;
-}
-
-@keyframes float-enhanced {
+@keyframes float {
   0%, 100% { 
-    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); 
-    opacity: 0.3;
-  }
-  25% { 
-    transform: translateY(-30px) translateX(20px) rotate(90deg) scale(1.1); 
-    opacity: 0.6;
+    transform: translateY(0px) rotate(0deg); 
   }
   50% { 
-    transform: translateY(-60px) translateX(-10px) rotate(180deg) scale(0.9); 
-    opacity: 0.4;
+    transform: translateY(-20px) rotate(180deg); 
   }
-  75% { 
-    transform: translateY(-20px) translateX(-30px) rotate(270deg) scale(1.2); 
-    opacity: 0.7;
-  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
