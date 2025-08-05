@@ -43,7 +43,8 @@ const Index = () => {
             </div>
 
             <GlassCard className="p-8" variant="hover">
-              <div className="space-y-8">
+              {/* Desktop: Stack vertically */}
+              <div className="hidden md:block space-y-8">
                 <div>
                   <div className="flex items-center mb-4">
                     <Code className="w-6 h-6 text-primary mr-3" />
@@ -67,8 +68,33 @@ const Index = () => {
                       </span>)}
                   </div>
                 </div>
+              </div>
 
+              {/* Mobile: Two columns side by side */}
+              <div className="md:hidden grid grid-cols-2 gap-4">
+                <div>
+                  <div className="flex items-center mb-3">
+                    <Code className="w-5 h-5 text-primary mr-2" />
+                    <h3 className="text-white font-semibold text-sm">Keahlian Teknis</h3>
+                  </div>
+                  <div className="space-y-2">
+                    {["AI Automasi", "Web Development", "Digital Marketing", "UI/UX Design"].map(skill => <div key={skill} className="px-3 py-1.5 glass rounded-full text-primary font-medium text-xs text-center">
+                        {skill}
+                      </div>)}
+                  </div>
+                </div>
                 
+                <div>
+                  <div className="flex items-center mb-3">
+                    <Users className="w-5 h-5 text-primary mr-2" />
+                    <h3 className="text-white font-semibold text-sm">Soft Skills</h3>
+                  </div>
+                  <div className="space-y-2">
+                    {["Kepemimpinan", "Komunikasi", "Manajemen", "Problem Solving"].map(skill => <div key={skill} className="px-3 py-1.5 glass rounded-full text-primary font-medium text-xs text-center">
+                        {skill}
+                      </div>)}
+                  </div>
+                </div>
               </div>
             </GlassCard>
           </div>
@@ -114,7 +140,7 @@ const Index = () => {
 
           {/* Mobile: Marquee Effect */}
           <div className="md:hidden overflow-hidden">
-            <div className="flex animate-marquee space-x-6">
+            <div className="flex animate-marquee-fast space-x-6">
               <GlassCard variant="stats" className="min-w-[200px] flex-shrink-0">
                 <div className="text-3xl font-bold text-gradient mb-2">15+</div>
                 <div className="text-white/80 font-medium text-sm">Organisasi</div>
@@ -212,7 +238,7 @@ const Index = () => {
 
           {/* Mobile: Horizontal Marquee */}
           <div className="md:hidden overflow-hidden">
-            <div className="flex animate-marquee space-x-6">
+            <div className="flex animate-marquee-fast space-x-6">
               <GlassCard variant="hover" className="min-w-[280px] flex-shrink-0">
                 <div className="text-center">
                   <div className="w-12 h-12 glass rounded-2xl flex items-center justify-center mb-4 mx-auto">
