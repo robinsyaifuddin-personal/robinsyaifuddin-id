@@ -35,11 +35,7 @@ const HeroSection = () => {
           transitionDelay: '0.2s'
         }}>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Programmer{" "}
-              <span className="text-primary glow-text">Full Stack</span>
-              <span className="inline-block bg-primary text-black px-4 py-2 rounded-lg text-2xl ml-4 shadow-[0_0_20px_rgba(255,102,0,0.6)]">
-                Senior
-              </span>
+              <span className="text-primary glow-text">Hi! i am Robin</span>
             </h2>
             
             <div className="h-1 w-32 bg-gradient-to-r from-primary to-orange-400 rounded-full mx-auto lg:mx-0" />
