@@ -2,25 +2,21 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Database, Smartphone, Globe, Briefcase, Mail, Brain, Cpu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-
-  return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 overflow-hidden">
+  return <section className="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 overflow-hidden">
       {/* Futuristic Background Grid */}
       <div className="fixed inset-0 opacity-20">
         <div className="absolute inset-0" style={{
-          backgroundImage: `
+        backgroundImage: `
             linear-gradient(rgba(255, 102, 0, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255, 102, 0, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
-        }} />
+        backgroundSize: '50px 50px'
+      }} />
       </div>
 
       {/* Animated Background */}
@@ -45,10 +41,7 @@ const HeroSection = () => {
                 Senior
               </span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Mahasiswa S1 Teknik Telekomunikasi yang passionate dalam pengembangan teknologi modern. 
-              Spesialis dalam AI automation, web development, dan digital innovation.
-            </p>
+            
             <div className="h-1 w-32 bg-gradient-to-r from-primary to-orange-400 rounded-full mx-auto lg:mx-0" />
           </div>
 
@@ -69,12 +62,7 @@ const HeroSection = () => {
                 Portfolio
               </Button>
             </Link>
-            <Link to="/contact">
-              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-black px-6 py-4 rounded-xl transform hover:scale-105 transition-all duration-300 group">
-                <Mail className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                Contact
-              </Button>
-            </Link>
+            
           </div>
         </div>
 
@@ -85,30 +73,37 @@ const HeroSection = () => {
         }}>
             <div className="relative w-80 h-80 mx-auto">
               {/* Animated Rings */}
-              <div className="absolute inset-0 border-2 border-primary/30 rounded-full animate-spin shadow-[0_0_20px_rgba(255,102,0,0.3)]" style={{ animationDuration: '20s' }} />
-              <div className="absolute inset-4 border border-primary/20 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
+              <div className="absolute inset-0 border-2 border-primary/30 rounded-full animate-spin shadow-[0_0_20px_rgba(255,102,0,0.3)]" style={{
+              animationDuration: '20s'
+            }} />
+              <div className="absolute inset-4 border border-primary/20 rounded-full animate-spin" style={{
+              animationDuration: '15s',
+              animationDirection: 'reverse'
+            }} />
               <div className="absolute inset-8 border border-primary/10 rounded-full animate-pulse" />
               
               {/* Profile Image with Glow */}
               <div className="absolute inset-12 rounded-full overflow-hidden shadow-[0_0_30px_rgba(255,102,0,0.4)]">
-                <img 
-                  src="/lovable-uploads/d0cfe490-7b8f-4828-9c87-686191456de5.png" 
-                  alt="Robin Syaifuddin" 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
+                <img src="/lovable-uploads/d0cfe490-7b8f-4828-9c87-686191456de5.png" alt="Robin Syaifuddin" className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
               </div>
 
               {/* Floating Tech Icons */}
               <div className="absolute -top-4 -right-4 bg-primary/20 backdrop-blur-md border border-primary/40 rounded-xl p-3 animate-float shadow-[0_0_15px_rgba(255,102,0,0.3)]">
                 <Code className="w-6 h-6 text-primary" />
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-primary/20 backdrop-blur-md border border-primary/40 rounded-xl p-3 animate-float shadow-[0_0_15px_rgba(255,102,0,0.3)]" style={{ animationDelay: '1s' }}>
+              <div className="absolute -bottom-4 -left-4 bg-primary/20 backdrop-blur-md border border-primary/40 rounded-xl p-3 animate-float shadow-[0_0_15px_rgba(255,102,0,0.3)]" style={{
+              animationDelay: '1s'
+            }}>
                 <Database className="w-6 h-6 text-primary" />
               </div>
-              <div className="absolute top-16 -left-12 bg-primary/20 backdrop-blur-md border border-primary/40 rounded-xl p-3 animate-float shadow-[0_0_15px_rgba(255,102,0,0.3)]" style={{ animationDelay: '2s' }}>
+              <div className="absolute top-16 -left-12 bg-primary/20 backdrop-blur-md border border-primary/40 rounded-xl p-3 animate-float shadow-[0_0_15px_rgba(255,102,0,0.3)]" style={{
+              animationDelay: '2s'
+            }}>
                 <Brain className="w-6 h-6 text-primary" />
               </div>
-              <div className="absolute bottom-16 -right-12 bg-primary/20 backdrop-blur-md border border-primary/40 rounded-xl p-3 animate-float shadow-[0_0_15px_rgba(255,102,0,0.3)]" style={{ animationDelay: '3s' }}>
+              <div className="absolute bottom-16 -right-12 bg-primary/20 backdrop-blur-md border border-primary/40 rounded-xl p-3 animate-float shadow-[0_0_15px_rgba(255,102,0,0.3)]" style={{
+              animationDelay: '3s'
+            }}>
                 <Smartphone className="w-6 h-6 text-primary" />
               </div>
             </div>
@@ -131,8 +126,6 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
