@@ -1,13 +1,28 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Code, Database, Smartphone, Globe, Briefcase, Mail } from "lucide-react";
+import { ArrowRight, Code, Database, Smartphone, Globe, Briefcase, Mail, Brain, Cpu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-  return <section className="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 overflow-hidden">
+
+  return (
+    <section className="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 overflow-hidden">
+      {/* Futuristic Background Grid */}
+      <div className="fixed inset-0 opacity-20">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(255, 102, 0, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 102, 0, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px'
+        }} />
+      </div>
+
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-card/50 to-background">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,102,0,0.1),transparent_50%)]" />
@@ -19,84 +34,82 @@ const HeroSection = () => {
         
         {/* Left Content */}
         <div className="flex-1 text-center lg:text-left space-y-8">
-          {/* Badge */}
-          
-
           {/* Main Heading */}
           <div className={`space-y-4 transform transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
           transitionDelay: '0.2s'
         }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-              Hi, Saya{" "}
-              <span className="text-gradient bg-gradient-to-r from-primary via-orange-400 to-primary bg-clip-text text-transparent">
-                Robin Syaifuddin
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              Programmer{" "}
+              <span className="text-primary glow-text">Full Stack</span>
+              <span className="inline-block bg-primary text-black px-4 py-2 rounded-lg text-2xl ml-4 shadow-[0_0_20px_rgba(255,102,0,0.6)]">
+                Senior
               </span>
-            </h1>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Mahasiswa S1 Teknik Telekomunikasi yang passionate dalam pengembangan teknologi modern. 
+              Spesialis dalam AI automation, web development, dan digital innovation.
+            </p>
             <div className="h-1 w-32 bg-gradient-to-r from-primary to-orange-400 rounded-full mx-auto lg:mx-0" />
           </div>
-
-          {/* Description */}
-          
 
           {/* CTA Buttons */}
           <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
           transitionDelay: '0.6s'
         }}>
-            <Link to="/portfolio">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-black font-semibold px-8 py-4 rounded-2xl transform hover:scale-105 transition-all duration-300 shadow-2xl group">
-                <Briefcase className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                Lihat Portfolio
+            <Link to="/about">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-black font-semibold px-8 py-4 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,102,0,0.6)] group">
+                <Mail className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                About Me
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
+            <Link to="/portfolio">
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-black px-6 py-4 rounded-xl transform hover:scale-105 transition-all duration-300 group">
+                <Briefcase className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                Portfolio
+              </Button>
+            </Link>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="border-2 border-primary/30 text-gray-300 hover:text-white hover:border-primary/60 px-8 py-4 rounded-2xl backdrop-blur-md bg-card/20 transform hover:scale-105 transition-all duration-300 group">
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-black px-6 py-4 rounded-xl transform hover:scale-105 transition-all duration-300 group">
                 <Mail className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                Hubungi Saya
+                Contact
               </Button>
             </Link>
           </div>
         </div>
 
-        {/* Right Content - Profile Image */}
+        {/* Futuristic Profile Section */}
         <div className="flex-1 flex justify-center items-center">
           <div className={`relative transform transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
           transitionDelay: '0.8s'
         }}>
-            
-            {/* Simple Rotating Ring */}
-            <div className="absolute inset-0 w-80 h-80 md:w-96 md:h-96 border-2 border-primary/30 rounded-full animate-spin" style={{
-            animationDuration: '20s'
-          }} />
-            <div className="absolute inset-4 w-72 h-72 md:w-88 md:h-88 border border-primary/20 rounded-full animate-spin" style={{
-            animationDuration: '15s',
-            animationDirection: 'reverse'
-          }} />
-
-            {/* Main Image Container */}
-            <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
-              {/* Background Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-orange-400/20 to-primary/30 rounded-full blur-2xl animate-pulse" />
+            <div className="relative w-80 h-80 mx-auto">
+              {/* Animated Rings */}
+              <div className="absolute inset-0 border-2 border-primary/30 rounded-full animate-spin shadow-[0_0_20px_rgba(255,102,0,0.3)]" style={{ animationDuration: '20s' }} />
+              <div className="absolute inset-4 border border-primary/20 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
+              <div className="absolute inset-8 border border-primary/10 rounded-full animate-pulse" />
               
-              {/* Image Frame */}
-              <div className="relative w-full h-full bg-gradient-to-br from-card via-background to-card rounded-full p-2 shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <div className="w-full h-full bg-gradient-to-br from-primary/10 to-transparent rounded-full p-1">
-                  <img src="/lovable-uploads/d0cfe490-7b8f-4828-9c87-686191456de5.png" alt="Robin Syaifuddin" className="w-full h-full object-cover rounded-full shadow-2xl transition-all duration-500" />
-                </div>
+              {/* Profile Image with Glow */}
+              <div className="absolute inset-12 rounded-full overflow-hidden shadow-[0_0_30px_rgba(255,102,0,0.4)]">
+                <img 
+                  src="/lovable-uploads/d0cfe490-7b8f-4828-9c87-686191456de5.png" 
+                  alt="Robin Syaifuddin" 
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
               </div>
 
-              {/* Static Skills Tags */}
-              <div className="absolute -top-8 -right-8 bg-card/90 backdrop-blur-md border border-primary/20 rounded-2xl px-4 py-2 shadow-xl">
-                <span className="text-primary text-sm font-semibold">React</span>
+              {/* Floating Tech Icons */}
+              <div className="absolute -top-4 -right-4 bg-primary/20 backdrop-blur-md border border-primary/40 rounded-xl p-3 animate-float shadow-[0_0_15px_rgba(255,102,0,0.3)]">
+                <Code className="w-6 h-6 text-primary" />
               </div>
-              <div className="absolute -bottom-8 -left-8 bg-card/90 backdrop-blur-md border border-primary/20 rounded-2xl px-4 py-2 shadow-xl">
-                <span className="text-primary text-sm font-semibold">Node.js</span>
+              <div className="absolute -bottom-4 -left-4 bg-primary/20 backdrop-blur-md border border-primary/40 rounded-xl p-3 animate-float shadow-[0_0_15px_rgba(255,102,0,0.3)]" style={{ animationDelay: '1s' }}>
+                <Database className="w-6 h-6 text-primary" />
               </div>
-              <div className="absolute top-16 -left-12 bg-card/90 backdrop-blur-md border border-primary/20 rounded-2xl px-4 py-2 shadow-xl">
-                <span className="text-primary text-sm font-semibold">TypeScript</span>
+              <div className="absolute top-16 -left-12 bg-primary/20 backdrop-blur-md border border-primary/40 rounded-xl p-3 animate-float shadow-[0_0_15px_rgba(255,102,0,0.3)]" style={{ animationDelay: '2s' }}>
+                <Brain className="w-6 h-6 text-primary" />
               </div>
-              <div className="absolute bottom-16 -right-12 bg-card/90 backdrop-blur-md border border-primary/20 rounded-2xl px-4 py-2 shadow-xl">
-                <span className="text-primary text-sm font-semibold">AI/ML</span>
+              <div className="absolute bottom-16 -right-12 bg-primary/20 backdrop-blur-md border border-primary/40 rounded-xl p-3 animate-float shadow-[0_0_15px_rgba(255,102,0,0.3)]" style={{ animationDelay: '3s' }}>
+                <Smartphone className="w-6 h-6 text-primary" />
               </div>
             </div>
           </div>
@@ -118,6 +131,8 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
