@@ -43,25 +43,36 @@ const Portfolio = () => {
 
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-x-hidden">
+      {/* Luxury Background */}
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-card/20 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,102,0,0.08),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,102,0,0.06),transparent_60%)]" />
+      </div>
+      
       <Header />
-      <div className="pt-20">
-        <div className="container mx-auto px-6 py-12">
+      
+      <main className="relative z-10 pt-24 pb-12">
+        <div className="container mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-gradient">Portofolio</span> Saya
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center justify-center p-2 mb-6 rounded-full bg-primary/10 border border-primary/20">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+              <span className="bg-gradient-to-r from-primary via-orange-400 to-yellow-400 bg-clip-text text-transparent">Portofolio</span> Saya
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
               Kumpulan proyek dan karya yang telah saya kembangkan
             </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-orange-400 rounded-full mx-auto mt-8" />
           </div>
 
-
           {/* Projects */}
-          <div>
-            <h2 className="text-3xl font-bold text-white mb-8">Proyek</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-8">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Proyek</h2>
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
               {projects.map((project, index) => (
                 project.url ? (
                   <a 
@@ -69,49 +80,53 @@ const Portfolio = () => {
                     href={project.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="bg-card border border-border rounded-xl p-6 hover:border-primary/30 transition-all duration-300 group cursor-pointer block hover:shadow-lg hover:shadow-primary/10"
+                    className="glass-card p-8 hover:shadow-2xl transition-all duration-500 group cursor-pointer block hover:scale-[1.02]"
                   >
-                    <div className="flex items-start justify-between mb-4">
-                      <h3 className="text-lg font-semibold text-white group-hover:text-primary transition-colors">
+                    <div className="flex items-start justify-between mb-6">
+                      <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors flex-1 pr-4">
                         {project.title}
                       </h3>
-                      <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors" />
+                      <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 group-hover:scale-110 duration-300" />
                     </div>
-                    <div className="flex items-center text-gray-400 mb-2">
-                      <MapPin className="w-4 h-4 mr-2" />
-                      <span className="text-sm">{project.location}</span>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center text-muted-foreground">
+                        <MapPin className="w-4 h-4 mr-2 text-primary" />
+                        <span className="text-sm">{project.location}</span>
+                      </div>
+                      <div className="flex items-center text-muted-foreground">
+                        <Calendar className="w-4 h-4 mr-2 text-primary" />
+                        <span className="text-sm">{project.year}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center text-gray-400 mb-4">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      <span className="text-sm">{project.year}</span>
-                    </div>
-                    <p className="text-gray-300 text-sm leading-relaxed">{project.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
                   </a>
                 ) : (
-                  <div key={index} className="bg-card border border-border rounded-xl p-6 hover:border-primary/30 transition-all duration-300 group">
-                    <div className="flex items-start justify-between mb-4">
-                      <h3 className="text-lg font-semibold text-white group-hover:text-primary transition-colors">
+                  <div key={index} className="glass-card p-8 hover:shadow-2xl transition-all duration-500 group hover:scale-[1.02]">
+                    <div className="flex items-start justify-between mb-6">
+                      <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                         {project.title}
                       </h3>
                       <div className="w-5 h-5" />
                     </div>
-                    <div className="flex items-center text-gray-400 mb-2">
-                      <MapPin className="w-4 h-4 mr-2" />
-                      <span className="text-sm">{project.location}</span>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center text-muted-foreground">
+                        <MapPin className="w-4 h-4 mr-2 text-primary" />
+                        <span className="text-sm">{project.location}</span>
+                      </div>
+                      <div className="flex items-center text-muted-foreground">
+                        <Calendar className="w-4 h-4 mr-2 text-primary" />
+                        <span className="text-sm">{project.year}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center text-gray-400 mb-4">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      <span className="text-sm">{project.year}</span>
-                    </div>
-                    <p className="text-gray-300 text-sm leading-relaxed">{project.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
                   </div>
                 )
               ))}
             </div>
           </div>
-
         </div>
-      </div>
+      </main>
+      
       <Footer />
     </div>
   );
