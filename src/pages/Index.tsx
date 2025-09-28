@@ -21,79 +21,104 @@ const Index = () => {
         <HeroSection />
 
         {/* About Preview with Glass Design */}
-        <section className="py-24 relative">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
-              <div className="space-y-8">
+        <section className="py-12 md:py-24 relative">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 xl:gap-24 items-center">
+              <div className="space-y-6 md:space-y-8">
                 <div>
-                  <div className="inline-flex items-center justify-center p-2 mb-6 rounded-full bg-primary/10 border border-primary/20">
+                  <div className="inline-flex items-center justify-center p-2 mb-4 md:mb-6 rounded-full bg-primary/10 border border-primary/20">
                     <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                   </div>
-                  <p className="text-primary text-sm uppercase tracking-wider mb-4 font-semibold">
+                  <p className="text-primary text-sm uppercase tracking-wider mb-3 md:mb-4 font-semibold">
                     Tentang Saya
                   </p>
-                  <h2 className="text-4xl md:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight">
                     Pengalaman & <span className="bg-gradient-to-r from-primary via-orange-400 to-yellow-400 bg-clip-text text-transparent">Keahlian</span>
                   </h2>
-                  <p className="text-muted-foreground text-lg xl:text-xl mb-8 leading-relaxed">
+                  <p className="text-muted-foreground text-base md:text-lg xl:text-xl mb-6 md:mb-8 leading-relaxed">
                     Saat ini sedang menempuh pendidikan S1 Teknik Telekomunikasi di Institut Teknologi Sumatera. 
                     Aktif dalam berbagai organisasi dan memiliki pengalaman magang di berbagai perusahaan teknologi.
                   </p>
                 </div>
                 
                 <Link to="/about">
-                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 group">
-                    <User className="w-5 h-5 mr-2" />
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 md:px-8 py-3 md:py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 group w-full sm:w-auto">
+                    <User className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                     Selengkapnya
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
               </div>
 
-              <div className="glass-card p-8 lg:p-10 hover:shadow-2xl transition-all duration-500">
-                {/* Desktop: Stack vertically */}
-                <div className="hidden md:block space-y-8">
+              <div className="glass-card p-6 md:p-8 lg:p-10 hover:shadow-2xl transition-all duration-500 order-first lg:order-last">
+                {/* Desktop & Tablet: Stack vertically */}
+                <div className="hidden sm:block space-y-6 md:space-y-8">
                   <div>
-                    <div className="flex items-center mb-6">
-                      <div className="p-3 bg-primary/20 rounded-xl mr-4">
-                        <Code className="w-6 h-6 text-primary" />
+                    <div className="flex items-center mb-4 md:mb-6">
+                      <div className="p-2 md:p-3 bg-primary/20 rounded-xl mr-3 md:mr-4">
+                        <Code className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                       </div>
-                      <h3 className="text-xl font-bold text-foreground">Keahlian Teknis</h3>
+                      <h3 className="text-lg md:text-xl font-bold text-foreground">Keahlian Teknis</h3>
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      {["AI Automasi", "Pengembang Website", "Desain Grafis", "Digital Marketing"].map((skill, index) => (
-                        <div key={index} className="p-3 bg-card/30 rounded-xl text-center hover:bg-card/50 transition-colors duration-300">
-                          <span className="text-sm font-medium text-muted-foreground">{skill}</span>
+                    <div className="grid grid-cols-2 gap-3 md:gap-4">
+                      {["AI Automasi", "Web Developer", "Desain Grafis", "Digital Marketing"].map((skill, index) => (
+                        <div key={index} className="p-2.5 md:p-3 bg-card/30 rounded-xl text-center hover:bg-card/50 transition-colors duration-300">
+                          <span className="text-xs md:text-sm font-medium text-muted-foreground">{skill}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                   
                   <div>
-                    <div className="flex items-center mb-6">
-                      <div className="p-3 bg-primary/20 rounded-xl mr-4">
-                        <Users className="w-6 h-6 text-primary" />
+                    <div className="flex items-center mb-4 md:mb-6">
+                      <div className="p-2 md:p-3 bg-primary/20 rounded-xl mr-3 md:mr-4">
+                        <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                       </div>
-                      <h3 className="text-xl font-bold text-foreground">Soft Skills</h3>
+                      <h3 className="text-lg md:text-xl font-bold text-foreground">Soft Skills</h3>
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-3 md:gap-4">
                       {["Kepemimpinan", "Komunikasi", "Kreatif", "Manajemen"].map((skill, index) => (
-                        <div key={index} className="p-3 bg-card/30 rounded-xl text-center hover:bg-card/50 transition-colors duration-300">
-                          <span className="text-sm font-medium text-muted-foreground">{skill}</span>
+                        <div key={index} className="p-2.5 md:p-3 bg-card/30 rounded-xl text-center hover:bg-card/50 transition-colors duration-300">
+                          <span className="text-xs md:text-sm font-medium text-muted-foreground">{skill}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
 
-                {/* Mobile: Single row scrollable */}
-                <div className="md:hidden">
-                  <h3 className="text-xl font-bold text-foreground mb-6">Keahlian Saya</h3>
-                  <div className="overflow-x-auto pb-2">
-                    <div className="flex space-x-4 min-w-max">
-                      {["AI Automasi", "Website Dev", "Design", "Marketing", "Leadership", "Communication"].map((skill, index) => (
-                        <div key={index} className="p-3 bg-card/30 rounded-xl whitespace-nowrap">
-                          <span className="text-sm font-medium text-muted-foreground">{skill}</span>
+                {/* Mobile: Compact grid layout */}
+                <div className="sm:hidden">
+                  <h3 className="text-lg font-bold text-foreground mb-4 text-center">Keahlian Saya</h3>
+                  
+                  {/* Technical Skills */}
+                  <div className="mb-5">
+                    <div className="flex items-center justify-center mb-3">
+                      <div className="p-2 bg-primary/20 rounded-lg mr-2">
+                        <Code className="w-4 h-4 text-primary" />
+                      </div>
+                      <span className="text-sm font-semibold text-foreground">Teknis</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      {["AI Automasi", "Web Dev", "Design", "Marketing"].map((skill, index) => (
+                        <div key={index} className="p-2 bg-card/30 rounded-lg text-center">
+                          <span className="text-xs font-medium text-muted-foreground">{skill}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Soft Skills */}
+                  <div>
+                    <div className="flex items-center justify-center mb-3">
+                      <div className="p-2 bg-primary/20 rounded-lg mr-2">
+                        <Users className="w-4 h-4 text-primary" />
+                      </div>
+                      <span className="text-sm font-semibold text-foreground">Soft Skills</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      {["Leadership", "Komunikasi", "Kreatif", "Manajemen"].map((skill, index) => (
+                        <div key={index} className="p-2 bg-card/30 rounded-lg text-center">
+                          <span className="text-xs font-medium text-muted-foreground">{skill}</span>
                         </div>
                       ))}
                     </div>
