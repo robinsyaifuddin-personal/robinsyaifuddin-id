@@ -28,7 +28,15 @@ const About = () => {
     "Juara 2 Mufest Ikam Lamtim Essay Competition - Ikatan Mahasiswa Lampung Timur 2024",
     "Juara 3 Duta GenRe Institut Teknologi Sumatera - LPSDM ITERA 2023",
     "Duta Inspirasi Indonesia Batch 9 - Yayasan Duta Inspirasi Indonesia 2023",
-    "Student Ambassador Diaspora Future Leader Scholarship - Diaspora Mengajar 2022"
+    "3 Besar Proposal Project Festival Pemuda Indonesia - Yayasan Harapan Bangsa, Yayasan Pondok Inspirasi 2022",
+    "Student Ambassador Diaspora Future Leader Scholarship - Diaspora Mengajar 2022",
+    "75 Besar Finalis Duta Pelajar Lampung - Gebyar Pelajar Lampung 2021",
+    "Juara 1 Video Dokumenter Semarak Hari Guru – FORMAPA dan HMI Cabang Persiapan Lampung Timur 2021",
+    "Duta Anak Kabupaten Lampung Timur - Dinas PPPA Kabupaten Lampung Timur 2021",
+    "Peringkat 5 Bidang Informatika Kompetisi Sains Nasional (KSN) - Disdikbud Provinsi Lampung 2021",
+    "Juara 1 Lomba Essay Cabang Bahasa Festival Pelajar Lampung - Gebyar Pelajar Lampung 2021",
+    "Juara 1 Lomba Menulis Narasi Anak Lampung Timur - Dinas PPPA Kabupaten Lampung Timur 2020",
+    "Duta Budaya Provinsi Lampung - Forum Anak dan Remaja Kota Mertoyudan 2019"
   ];
 
   const experiences = [
@@ -66,23 +74,43 @@ const About = () => {
     "Anggota Bidang Wasit Esport Indonesia Kabupaten Lampung Timur, Juni 2025 - sekarang",
     "Anggota Komisi 2 Eksternal Medinfo Senat Keluarga Mahasiswa ITERA, Maret 2025 - sekarang",
     "Senator Himpunan Mahasiswa Telekomunikasi Quaestum ITERA, Maret 2025 - sekarang",
-    "Kepala Bidang Perencanaan dan Pengembangan GenRe Kabupaten Lampung Timur, Juni 2022 - sekarang"
+    "Anggota Pengelolaan Lahan Agroforestri Agropreneur ITERA, Desember 2024 - sekarang",
+    "Anggota PSDM Ikatan Mahasiswa Lampung Timur, November 2024 – sekarang",
+    "Kepala Bidang Perencanaan dan Pengembangan GenRe Kabupaten Lampung Timur, Juni 2022 - sekarang",
+    "Anggota Divisi Pendampingan dan Perlindungan Satgas PPKS ITERA, Oktober 2023 - Oktober 2024",
+    "Kepala Sub Divisi Konselor Sebaya PIKR Sejahtera ITERA, November 2023 - September 2024",
+    "Anggota Bidang Kepemudaan Gebyar Pelajar Lampung, Maret 2023 - Maret 2024",
+    "Anggota Divisi Editor Millenials Menginspirasi, Juni 2023 - Agustus 2023",
+    "Anggota Relawan Pemuda Lampung, Desember 2022 - Juni 2023",
+    "Kepala Bidang Administrasi dan Data Forum Anak Daerah Lampung, Oktober 2021 - Oktober 2023",
+    "Wakil Koordinator Forum Pelajar Lampung Kabupaten Lampung Timur, Februari 2021- Februari 2022",
+    "Ketua Umum Forum Anak Daerah Kabupaten Lampung Timur, Oktober 2019 - Oktober 2021"
   ];
 
   const trainings = [
     "Peserta Leadership Development Program – Ikatan Mahasiswa Lampung Timur 2025",
     "Peserta Latihan Keterampilan Manajemen Mahasiswa TD-ITERA 2024",
     "Peserta Inspiring Leader Camp Batch 3 - Yayasan Duta Inspirasi Indonesia 2023",
+    "Peserta Latihan Kepemimpinan Pemuda - Komite Nasional Pemuda Indonesia Provinsi Lampung 2023",
+    "Peserta Latihan Kepemimpinan - Dinas Pemuda dan Olahraga Provinsi Lampung 2022",
+    "Peserta Jambore Genre Provinsi Lampung - Badan Kependudukan dan Keluarga Berencana Lampung 2022",
+    "Peserta Student Leadership Camp Batch 3 – Gebyar Pelajar Lampung 2022",
     "Peserta International Model United Nations, Online Conference 94.0, - International Global Network 2022",
-    "Peserta StartUp Youth Indonesia Leadership Camp, - StartUp Youth Indonesia dan Forum Osis Nasional 2021"
+    "Peserta StartUp Youth Indonesia Leadership Camp, - StartUp Youth Indonesia dan Forum Osis Nasional 2021",
+    "Peserta Temu FAD Lampung - Dinas PPPA Provinsi Lampung 2021",
+    "Peserta Pelatihan Konvensi Hak Anak - Dinas PPPA Kabupaten Lampung Timur 2021",
+    "Peserta Kongres Anak Indonesia - Lembaga Perlindungan Anak Indonesia 2020"
   ];
 
   const certifications = [
     "Sertifikasi Front Office Agroforestri ITERA - Agropreneur ITERA",
-    "Certificate of Competence – Website Creation (habiskerja.com)",
-    "Sertifikat WordPress dari Dasar Hingga Mahir (kursusdigital.id)",
-    "Sertifikat Digital Marketing dari Dasar Hingga Mahir (kursusdigital.id)",
-    "Certificate of Completion – HTML & CSS for Beginners (Learnoverse)"
+    "Certificate of Competence, has complated the 'Website Creation' and performing excellence performance in several topics such as Website installation, Landing page creation, Professional website creation, UI/UX, Website project management. - habiskerja.com",
+    "Sertifikat Penyelesaian 'Kelas WordPress dari Dasar Hingga Mahir' - kursusdigital.id",
+    "Sertifikat Penyelesaian 'Kelas Digital Marketing dari Dasar Hingga Mahir' - kursusdigital.id",
+    "For successfully completing all examinations consist of multiple choice and true or false questions on: 'Tes Pengetahuan Penelitian, Keilmiahan, Dan Karya Tulis Ilmiah' - Science Hunter Indonesia",
+    "Certificate of Completion, has successfully completed course 'Introducing Coding for Beginners: an HTML and CSS Online Course' - Learnoverse",
+    "Certificate of Completion for successfully completing 'HTML Dasar' - Skillful",
+    "Certificate of Completion for successfully completing 'CSS Dasar' - Skillful"
   ];
 
   return (

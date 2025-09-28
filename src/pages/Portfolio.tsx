@@ -6,38 +6,44 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "Digitalisasi Desa: Inovasi Website untuk Transparansi",
+      title: "Digitalisasi Desa: Inovasi Website untuk Transparansi, Layanan, dan Informasi Publik",
       location: "Desa Fajar Baru, Lampung Selatan",
       year: "2025",
       description: "Pengembangan website untuk transparansi, layanan, dan informasi publik desa",
       url: "https://desafajarbaru.web.id"
     },
     {
-      title: "Transformasi Digital Pariwisata Lamsel",
+      title: "Transformasi Digital Pariwisata Lamsel melalui Pengembangan Website untuk Destinasi, Kecamatan, dan UMKM Lokal",
       location: "Lampung Selatan",
       year: "2025",
       description: "Pengembangan website untuk destinasi, kecamatan, dan UMKM lokal",
       url: "https://lamselmaju-id.lovable.app"
     },
     {
-      title: "Portal Hukum Website Terintegrasi",
-      location: "Lampung Selatan",
+      title: "Portal Hukum Website Terintegrasi untuk Edukasi dan Layanan Bantuan Hukum Online",
+      location: "Yayayasan Lembaga Bantuan Hukum Merdeka, Lampung Selatan",
       year: "2025",
-      description: "Website untuk edukasi dan layanan bantuan hukum online Yayayasan Lembaga Bantuan Hukum Merdeka",
+      description: "Website untuk edukasi dan layanan bantuan hukum online",
       url: "https://ylbh-merdeka.lovable.app"
     },
     {
-      title: "Digibooster Indonesia",
+      title: "Digibooster Indonesia: Platform Layanan Jasa Digital Terbaik",
       location: "Bandar Lampung",
       year: "2025",
-      description: "Platform Layanan Jasa Digital Terbaik untuk membantu bisnis bertransformasi digital dengan solusi komprehensif dan profesional",
+      description: "Platform untuk membantu bisnis bertransformasi digital dengan solusi komprehensif dan profesional",
       url: "https://digibooster.web.id"
     },
     {
-      title: "Pengembangan Desa Eco-edu-tourism",
+      title: "Pengembangan Desa Eco-edu-tourism Berbasis Sumberdaya Alam Lokal dan diversifikasi Produk Skincare Garam Rakyat",
       location: "Pulau Legundi, Pesawaran",
       year: "2024",
       description: "Berbasis sumberdaya alam lokal dan diversifikasi produk skincare garam rakyat"
+    },
+    {
+      title: "Sosialisasi dan Pengimplementasian Project Damar Rek Aksara (DAREKSA)",
+      location: "Desa Pugung Penengahan, Pesisir Barat",
+      year: "2024",
+      description: "Inovasi Produk Pengolahan Getah Damar"
     }
   ];
 
